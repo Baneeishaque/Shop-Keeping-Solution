@@ -65,7 +65,7 @@ public class Expense_Ledger_Helper {
         Common_Tasks.add_single_row_to_table(jt, new String[]{"", "", "Total Expense", Common_Tasks.return_total_of_a_column_from_jTable(jt, 3)});
 
     }
-    
+
     public static void init_expense_ledger(JTable jt, String date) {
         jt.setModel(DbUtils.resultSetToTableModel(Expense_DB.get_expense_ledger(date)));
         Common_Tasks.add_blank_row_to_table(jt);
@@ -131,16 +131,16 @@ public class Expense_Ledger_Helper {
     }
 
     public static void populate_date_combo_box(JComboBox jc) {
-        Vector v=new Vector();
+        Vector v = new Vector();
         try {
-            v=Common_Tasks.Resultset_to_vector(DB_Common.s.executeQuery("SELECT DISTINCT `expense_date` FROM `expense`"));
+            v = Common_Tasks.Resultset_to_vector(DB_Common.s.executeQuery("SELECT DISTINCT `expense_date` FROM `expense`"));
             v.addAll(Common_Tasks.Resultset_to_vector(DB_Common.s.executeQuery("SELECT DISTINCT purchase_bill.purchase_bill_date FROM purchase_bill")));
             v.addAll(Common_Tasks.Resultset_to_vector(DB_Common.s.executeQuery("SELECT DISTINCT purchase_bill_credit.purchase_bill_credit_pay_date FROM purchase_bill_credit")));
             Common_Tasks.populate_combobox_from_vector(jc, v);
         } catch (SQLException ex) {
             Logger.getLogger(Expense_Ledger_Helper.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
 
 }

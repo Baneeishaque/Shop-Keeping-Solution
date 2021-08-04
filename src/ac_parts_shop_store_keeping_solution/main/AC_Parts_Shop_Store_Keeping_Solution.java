@@ -28,7 +28,7 @@ public class AC_Parts_Shop_Store_Keeping_Solution {
 //        new DB_Common().convert_normal_date_to_sql_date("18-09-2016");
 //Common_Tasks.parse_string_seperated_by_symbol("2016-09-18~P-3, S-Supplier2, Credit-450.0000~500.0000", "~");
         new Daily_Expense().setVisible(true);
-        
+
     }
-    
+
 }

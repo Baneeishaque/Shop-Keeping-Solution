@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 public class Pay_Credit_Purchase extends javax.swing.JFrame {
 
     private int supplier_combo_flag = 0;
-    private int purchase_bill_no_flag=0;
+    private int purchase_bill_no_flag = 0;
 
     /**
      * Creates new form Pay_Credit_Purchase
@@ -211,7 +211,6 @@ public class Pay_Credit_Purchase extends javax.swing.JFrame {
     private void jCombobox_supplierItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCombobox_supplierItemStateChanged
 
         // TODO add your handling code here:
-
     }//GEN-LAST:event_jCombobox_supplierItemStateChanged
 
     private void jCombobox_purchase_bill_noItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCombobox_purchase_bill_noItemStateChanged
@@ -222,9 +221,9 @@ public class Pay_Credit_Purchase extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (supplier_combo_flag == 1) {
             Common_Tasks.debug_display(Common_Tasks.parse_string_seperated_by_symbol(jCombobox_supplier.getSelectedItem().toString(), ":").elementAt(0).toString());
-            purchase_bill_no_flag=0;
+            purchase_bill_no_flag = 0;
             jLabel_total_credit.setText(Purchase_Bill_DB.populate_purchase_numbers_having_unresolved_balance(jCombobox_purchase_bill_no, Common_Tasks.parse_string_seperated_by_symbol(jCombobox_supplier.getSelectedItem().toString(), ":").elementAt(0).toString()));
-            purchase_bill_no_flag=1;
+            purchase_bill_no_flag = 1;
 
         }
     }//GEN-LAST:event_jCombobox_supplierActionPerformed
@@ -254,9 +253,8 @@ public class Pay_Credit_Purchase extends javax.swing.JFrame {
 
     private void jCombobox_purchase_bill_noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCombobox_purchase_bill_noActionPerformed
         // TODO add your handling code here:
-        if(purchase_bill_no_flag==1)
-        {
-        jLabel_credit_amount.setText(Purchase_Bill_DB.return_balance_of_a_credit_bill(jCombobox_purchase_bill_no.getSelectedItem().toString(), " ", 4));
+        if (purchase_bill_no_flag == 1) {
+            jLabel_credit_amount.setText(Purchase_Bill_DB.return_balance_of_a_credit_bill(jCombobox_purchase_bill_no.getSelectedItem().toString(), " ", 4));
         }
 
     }//GEN-LAST:event_jCombobox_purchase_bill_noActionPerformed
@@ -268,7 +266,7 @@ public class Pay_Credit_Purchase extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

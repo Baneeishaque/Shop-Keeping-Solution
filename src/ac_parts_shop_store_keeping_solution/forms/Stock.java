@@ -141,7 +141,7 @@ public class Stock extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        String result=Stock_DB.insert_values(new String[]{jLabel_item_id.getText(),item_name.getText(), item_quantity.getText(), item_unit_price.getText(),"Initial Stock"},new int[]{2,5});
+        String result = Stock_DB.insert_values(new String[]{jLabel_item_id.getText(), item_name.getText(), item_quantity.getText(), item_unit_price.getText(), "Initial Stock"}, new int[]{2, 5});
         if (result.equals("true")) {
 
             JOptionPane.showMessageDialog(rootPane, "Item Inserted Successfully");
@@ -157,7 +157,7 @@ public class Stock extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

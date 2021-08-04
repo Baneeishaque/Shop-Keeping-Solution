@@ -376,9 +376,7 @@ public class Sales extends javax.swing.JFrame {
         if (jCombobox_Payment_Type.getSelectedIndex() == 0) {
             result = Sales_Bill_DB.insert_values(new String[]{jLabel_sales_bill_no.getText(), Common_Tasks.date_from_date_time_seperated_by_space(jLabel_date.getText()), Common_Tasks.parse_string_seperated_by_full_column(jCombobox_customer.getSelectedItem().toString()).elementAt(0).toString(), jLabel_total.getText(), jCombobox_Payment_Type.getSelectedItem().toString(), jLabel_total.getText()}, new int[]{2, 5}, jTable_sale_bill);
 
-        }
-        else
-        {
+        } else {
             result = Sales_Bill_DB.insert_values(new String[]{jLabel_sales_bill_no.getText(), Common_Tasks.date_from_date_time_seperated_by_space(jLabel_date.getText()), Common_Tasks.parse_string_seperated_by_full_column(jCombobox_customer.getSelectedItem().toString()).elementAt(0).toString(), jLabel_total.getText(), jCombobox_Payment_Type.getSelectedItem().toString(), jTextField_pay_amount.getText()}, new int[]{2, 5}, jTable_sale_bill);
         }
         if (result.equals("true")) {
@@ -427,7 +425,7 @@ public class Sales extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

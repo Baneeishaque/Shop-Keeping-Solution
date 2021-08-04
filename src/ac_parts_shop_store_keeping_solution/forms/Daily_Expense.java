@@ -16,7 +16,7 @@ import net.proteanit.sql.DbUtils;
  */
 public class Daily_Expense extends javax.swing.JFrame {
 
-    private int combo_box_date_flag=0;
+    private int combo_box_date_flag = 0;
 
     /**
      * Creates new form Dail_Expense
@@ -25,9 +25,9 @@ public class Daily_Expense extends javax.swing.JFrame {
         initComponents();
         Common_Tasks.display_frame(this);
         Expense_Ledger_Helper.init_expense_ledger(jTable_expense_ledger);
-        combo_box_date_flag=0;
+        combo_box_date_flag = 0;
         Expense_Ledger_Helper.populate_date_combo_box(jComboBox_date);
-        combo_box_date_flag=1;
+        combo_box_date_flag = 1;
     }
 
     /**
@@ -107,9 +107,8 @@ public class Daily_Expense extends javax.swing.JFrame {
 
     private void jComboBox_dateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_dateActionPerformed
         // TODO add your handling code here:
-        if(combo_box_date_flag==1)
-        {
-            Expense_Ledger_Helper.init_expense_ledger(jTable_expense_ledger,jComboBox_date.getSelectedItem().toString());
+        if (combo_box_date_flag == 1) {
+            Expense_Ledger_Helper.init_expense_ledger(jTable_expense_ledger, jComboBox_date.getSelectedItem().toString());
         }
     }//GEN-LAST:event_jComboBox_dateActionPerformed
 
@@ -120,7 +119,7 @@ public class Daily_Expense extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

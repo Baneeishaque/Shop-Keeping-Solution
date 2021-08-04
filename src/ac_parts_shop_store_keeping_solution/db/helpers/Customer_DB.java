@@ -19,16 +19,12 @@ public class Customer_DB {
 
     public static String insert_values(String[] Values, int[] Varchar_positions) {
 
-        String result=DB_Common.insert_values(Table_name, Values, Varchar_positions);
-        if(result.equals("true"))
-        {
+        String result = DB_Common.insert_values(Table_name, Values, Varchar_positions);
+        if (result.equals("true")) {
             return "true";
-        }
-        else
-        {
+        } else {
             return result;
         }
-            
 
     }
 
@@ -38,20 +34,14 @@ public class Customer_DB {
 
     }
 
-    public static void populate_customer(JComboBox supplier,String[] Columns) {
+    public static void populate_customer(JComboBox supplier, String[] Columns) {
         Common_Tasks.populate_combobox_more_than_one_column(supplier, DB_Common.get_column_specific_values(Table_name, Columns, false, "", false, ""), Columns);
-        
+
     }
-    
+
     public static void populate_customers_having_unresolved_balance(JComboBox customer) {
         Common_Tasks.populate_combobox_by_parsing_string_with_symbol(customer, Sales_Bill_DB.return_customers_having_unresolved_balance(), "-");
-        
-    }
-    
-    
-    
-    
 
-    
+    }
 
 }

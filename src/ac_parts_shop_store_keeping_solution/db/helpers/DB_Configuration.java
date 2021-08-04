@@ -17,7 +17,7 @@ public class DB_Configuration {
             DB_Name = "ac_parts_shop_db",
             DB_User = "root",
             DB_User_Passcode = "";
-    
+
     public static final String[] DB_Init_Queries_MySQL = new String[]{"DROP TABLE IF EXISTS `purchase_bill`",
         "CREATE TABLE `purchase_bill` (\n"
         + "  `purchase_bill_number` int(11) NOT NULL,\n"
@@ -30,8 +30,8 @@ public class DB_Configuration {
         "INSERT INTO `purchase_bill` (`purchase_bill_number`, `purchase_bill_date`, `supplier_id`, `purchase_bill_amount`, `purchase_bill_type`, `purchase_bill_payed_amount`) VALUES\n"
         + "(1, '16-09-2016', 1, '50.0000', 'Credit', '40.0000'),\n"
         + "(2, '16-09-2016', 2, '5.0000', 'Credit', '2.0000')"};
-    
+
     public static String[] DB_Init_Queries_H2;
-    
+
     public static String[] DB_Init_Queries_SQLite;
 }

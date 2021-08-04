@@ -93,8 +93,7 @@ public class DB_Common {
         try {
             jdate = (Date) formatter.parse(sdate);
             sql_date = new java.sql.Date(jdate.getTime());
-            
-            
+
         } catch (ParseException ex) {
             Logger.getLogger(DB_Common.class.getName()).log(Level.SEVERE, null, ex);
         }

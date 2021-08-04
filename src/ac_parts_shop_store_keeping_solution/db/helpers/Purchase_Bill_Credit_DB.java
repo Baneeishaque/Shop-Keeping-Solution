@@ -17,16 +17,12 @@ public class Purchase_Bill_Credit_DB {
 
     public static String insert_values(String[] Values, int[] Varchar_positions) {
 
-        String result=DB_Common.insert_values(Table_name, Values, Varchar_positions);
-        if(result.equals("true"))
-        {
+        String result = DB_Common.insert_values(Table_name, Values, Varchar_positions);
+        if (result.equals("true")) {
             return "true";
-        }
-        else
-        {
+        } else {
             return result;
         }
-            
 
     }
 
@@ -35,6 +31,5 @@ public class Purchase_Bill_Credit_DB {
         return DB_Common.return_maximum_value_of_a_column_plus(Table_name, Column);
 
     }
-
 
 }

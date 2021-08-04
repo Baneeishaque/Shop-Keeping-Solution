@@ -138,10 +138,8 @@ public class Sales_Bill_DB {
     }
 
     public static String return_balance_of_a_credit_bill(String credit_bill_details, String symbol, int position) {
-        
+
         return Common_Tasks.return_part_of_a_string_seperated_by_a_symbol(credit_bill_details, symbol, position);
     }
-    
-   
 
 }

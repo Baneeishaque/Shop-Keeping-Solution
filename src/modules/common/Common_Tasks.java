@@ -108,11 +108,9 @@ public class Common_Tasks {
 
         for (int i = 0; i < v.size(); i++) {
 
-            if(!is_combo_box_contains_an_item(jc, v.elementAt(i).toString()))
-            {
+            if (!is_combo_box_contains_an_item(jc, v.elementAt(i).toString())) {
                 jc.addItem(v.elementAt(i).toString());
             }
-            
 
         }
 

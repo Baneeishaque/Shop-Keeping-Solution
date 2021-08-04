@@ -26,16 +26,12 @@ public class Supplier_DB {
 
     public static String insert_values(String[] Values, int[] Varchar_positions) {
 
-        String result=DB_Common.insert_values(Table_name, Values, Varchar_positions);
-        if(result.equals("true"))
-        {
+        String result = DB_Common.insert_values(Table_name, Values, Varchar_positions);
+        if (result.equals("true")) {
             return "true";
-        }
-        else
-        {
+        } else {
             return result;
         }
-            
 
     }
 
@@ -45,20 +41,14 @@ public class Supplier_DB {
 
     }
 
-    public static void populate_supplier(JComboBox supplier,String[] Columns) {
+    public static void populate_supplier(JComboBox supplier, String[] Columns) {
         Common_Tasks.populate_combobox_more_than_one_column(supplier, DB_Common.get_column_specific_values(Table_name, Columns, false, "", false, ""), Columns);
-        
+
     }
-    
+
     public static void populate_suppliers_having_unresolved_balance(JComboBox supplier) {
         Common_Tasks.populate_combobox_by_parsing_string_with_symbol(supplier, Purchase_Bill_DB.return_suppliers_having_unresolved_balance(), "-");
-        
-    }
-    
-    
-    
-    
 
-    
+    }
 
 }
